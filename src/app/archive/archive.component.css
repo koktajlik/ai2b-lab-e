@@ -1,0 +1,49 @@
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.task {
+  padding-block: 15px;
+  padding-inline: 10px;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: black;
+  margin-bottom: 10px;
+
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'deadline actions' 'title title';
+}
+
+.title {
+  grid-area: title;
+}
+
+.deadline {
+  grid-area: deadline;
+}
+
+.deadline span {
+  padding-inline: 5px;
+  padding-block: 5px;
+  font-weight: bold;
+  background-color: lightskyblue;
+  border-radius: 8px;
+  font-size: 0.8em;
+}
+
+.actions {
+  grid-area: actions;
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  .task {
+    grid-template-columns: 3fr 1fr auto;
+    grid-template-areas: 'title deadline actions';
+  }
+}

@@ -1,0 +1,117 @@
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.tasks .task {
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding-inline: 20px;
+  padding-block: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 10px;
+}
+
+.tasks .task.completed {
+  text-decoration: line-through;
+  color: grey;
+  background-color: #fafafa;
+  border-color: #ebebeb;
+}
+
+.tasks .task .deadline span {
+  padding: 5px;
+  padding-inline: 10px;
+  background-color: lightskyblue;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.tasks .task .actions {
+  grid-area: actions;
+  text-align: right;
+}
+
+.tasks .task .title {
+  grid-area: title;
+}
+
+.tasks .task .deadline {
+  grid-area: deadline;
+}
+
+@media screen and (min-width: 768px) {
+  .tasks .task {
+    grid-template-columns: 3fr 1fr auto;
+    grid-template-areas: 'title deadline actions';
+  }
+
+  .new-task {
+    grid-template-columns: 1fr 1fr auto;
+  }
+
+  .new-task .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .new-task .form-group .form-control {
+    flex-grow: 1;
+  }
+}
+
+.new-task label {
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+.new-task .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-task .form-group button{
+  padding: 4px;
+  color: white;
+  background-color: blueviolet;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid lightcoral;
+}
+
+.new-task {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin-bottom: 40px;
+}
+
+.new-task .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .new-task {
+    grid-template-columns: 1fr 1fr auto;
+  }
+
+  .new-task .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .new-task .form-group .form-control {
+    flex-grow: 1;
+  }
+}
