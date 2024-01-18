@@ -64,4 +64,21 @@ export class TasksComponent {
       this.ngOnInit();
     });
   }
+
+  canArchiveCompleted() {
+    for (const task of this.tasks) {
+      if (task.completed) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  canAddTask() {
+    if (this.isProcessing) {
+      return false;
+    }
+
+    return !!this.newTask.title;
+  }
 }

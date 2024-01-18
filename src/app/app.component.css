@@ -3,39 +3,12 @@ app-root{
   min-height: 100vh;
 }
 
-header {
-  height: 70px;
-  background-color: lightskyblue;
-  display: flex;
-}
-
-header nav {
-  display: flex;
-  gap: 1em;
-}
-
 a {
-  width: 6rem;
-  margin-top: 1.5rem;
   text-decoration: none;
-  color: midnightblue;
-}
-
-a.active {
-  text-decoration: underline;
-  font-weight: bold;
 }
 
 h1 {
-  color: midnightblue;
-  margin-top: 0;
-  padding-top: 15px;
-  width: 100%;
-  text-align: center;
-}
-
-div{
-  padding-bottom: 2.5rem;
+  width: 70%;
 }
 
 footer {

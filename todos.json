@@ -6,6 +6,20 @@
       "completed": false,
       "archived": false,
       "id": 4
+    },
+    {
+      "title": "Testowe zadanie 2",
+      "deadline": "2024-01-30",
+      "completed": true,
+      "archived": false,
+      "id": 5
+    },
+    {
+      "title": "Testowe zadanie 3",
+      "deadline": "2024-01-16",
+      "completed": true,
+      "archived": true,
+      "id": 6
     }
   ]
 }
